@@ -209,7 +209,7 @@ export default function Home() {
                 className="absolute inset-0 rounded-[4px] overflow-hidden border border-plum-200"
                 style={{
                   backgroundImage:
-                    'linear-gradient(180deg, rgba(30, 14, 24, 0.35) 0%, rgba(250, 246, 239, 0.10) 100%), url(https://picsum.photos/seed/amanda-dance-studio/900/1100)',
+                    'linear-gradient(180deg, rgba(30, 14, 24, 0.25) 0%, rgba(30, 14, 24, 0.15) 100%), url(/hero.jpg)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
@@ -343,7 +343,7 @@ export default function Home() {
                 className="absolute inset-0 rounded-[4px] overflow-hidden border border-plum-200"
                 style={{
                   backgroundImage:
-                    'linear-gradient(180deg, rgba(30, 14, 24, 0) 0%, rgba(30, 14, 24, 0.25) 100%), url(https://picsum.photos/seed/amanda-portrait-fitness/800/1000)',
+                    'linear-gradient(180deg, rgba(30, 14, 24, 0) 0%, rgba(30, 14, 24, 0.20) 100%), url(/about.jpg)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
