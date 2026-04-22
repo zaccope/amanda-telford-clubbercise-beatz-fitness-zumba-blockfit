@@ -21,22 +21,24 @@ const sans = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://amanda-telford-fitness.vercel.app'),
-  title: 'Amanda Telford Fitness | Clubbercise, Beatz, Zumba & BlockFit — Shrewsbury',
+  title: 'Amanda Telford Fitness | Clubbercise, Zumba, Yogascape & More — Telford',
   description:
-    'Dance fitness classes in Shrewsbury with Amanda Telford. Clubbercise, Beatz Fitness, Zumba and BlockFit — high-energy, welcoming and genuinely fun. All fitness levels welcome.',
+    'Community fun fitness classes in Telford with Amanda Telford. Clubbercise, Decades Reloaded, Yogascape, Step In Line Dancing, PomSquad, Beatz, Zumba and BlockFit — all levels welcome.',
   keywords: [
-    'Clubbercise Shrewsbury',
-    'Zumba Shrewsbury',
-    'Beatz Fitness Shrewsbury',
-    'BlockFit Shrewsbury',
-    'dance fitness classes Shrewsbury',
+    'Clubbercise Telford',
+    'Zumba Telford',
+    'Yogascape Telford',
+    'PomSquad Fitness Telford',
+    'Step In Line Dancing Telford',
+    'Decades Reloaded Telford',
+    'dance fitness classes Telford',
     'fitness classes Shropshire',
     'Amanda Telford',
   ],
   openGraph: {
-    title: 'Amanda Telford Fitness — Dance Fitness Classes in Shrewsbury',
+    title: 'Amanda Telford Fitness — Community Fun Fitness Classes in Telford',
     description:
-      'Clubbercise, Beatz, Zumba and BlockFit with Amanda. Come for the workout, stay for the people.',
+      'Clubbercise, Decades Reloaded, Yogascape, Step In Line, PomSquad, Zumba, Beatz and BlockFit with Amanda. Non-judgemental, fun, friendly. All levels welcome.',
     type: 'website',
     locale: 'en_GB',
     siteName: 'Amanda Telford Fitness',
@@ -52,16 +54,20 @@ const jsonLd = {
   '@type': 'HealthClub',
   name: 'Amanda Telford Fitness',
   description:
-    'Dance fitness classes in Shrewsbury — Clubbercise, Beatz Fitness, Zumba and BlockFit with Amanda Telford.',
+    'Community fun fitness classes in Telford with Amanda Telford — Clubbercise, Decades Reloaded, Yogascape, Step In Line Dancing, PomSquad Fitness, Beatz, Zumba and BlockFit.',
+  telephone: '+44 7780 515350',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Shrewsbury',
+    addressLocality: 'Telford',
     addressRegion: 'Shropshire',
     addressCountry: 'GB',
   },
   areaServed: [
-    { '@type': 'City', name: 'Shrewsbury' },
+    { '@type': 'City', name: 'Telford' },
     { '@type': 'AdministrativeArea', name: 'Shropshire' },
+  ],
+  sameAs: [
+    'https://www.instagram.com/amandaclubbercise72/',
   ],
 }
 

@@ -147,8 +147,14 @@ export default function Navbar() {
               >
                 Book a class
               </a>
-              <p className="text-center text-[11px] tracking-[0.3em] uppercase text-plum-400 mt-5">
-                Shrewsbury &middot; Shropshire
+              <a
+                href="tel:+447780515350"
+                className="block text-center text-[12px] tracking-[0.25em] uppercase text-plum-600 hover:text-coral-600 transition-colors mt-5"
+              >
+                07780 515350
+              </a>
+              <p className="text-center text-[11px] tracking-[0.3em] uppercase text-plum-400 mt-3">
+                Telford &middot; Shropshire
               </p>
             </div>
           </div>

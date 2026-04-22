@@ -3,12 +3,15 @@ import {
   FireSimple,
   HeartStraight,
   Lightning,
-  Star,
-  Ticket,
+  VinylRecord,
+  Leaf,
+  PersonSimpleWalk,
+  Sparkle,
   ShieldCheck,
   MapPin,
   Clock,
   Users,
+  Phone,
   InstagramLogo,
   FacebookLogo,
   CaretRight,
@@ -28,20 +31,36 @@ const classes = [
       'Club anthems from every era, glow sticks in hand, lights low. A proper dance-floor workout that doesn&rsquo;t feel like one. The one people keep coming back for.',
   },
   {
-    icon: FireSimple,
-    name: 'Beatz Fitness',
-    tag: 'World Dance',
-    duration: '45 min · 350+ cals',
+    icon: VinylRecord,
+    name: 'Decades Reloaded',
+    tag: 'Throwback',
+    duration: '45 min · nostalgic',
     desc:
-      'Bhangra, Bollywood, Afrobeats, soca and reggaeton in one class. Every track is a different country — part workout, part world tour, all good mood.',
+      'A full-on dance through the 70s, 80s, 90s and 00s. Every track is one you already know the words to &mdash; disco, pop, Britpop, club classics. Cardio by stealth.',
   },
   {
-    icon: HeartStraight,
-    name: 'Zumba',
-    tag: 'Latin',
-    duration: '45 min · 300+ cals',
+    icon: Leaf,
+    name: 'Yogascape',
+    tag: 'Breathe',
+    duration: '60 min · restorative',
     desc:
-      'The original. Licensed Zumba fitness — merengue, salsa, cumbia, reggaeton — built around rhythms you already want to move to.',
+      'A gentle, guided yoga flow set to beautiful soundscapes. Balance, flexibility, breath and a proper mental reset. The quiet counterpart to the dance classes.',
+  },
+  {
+    icon: PersonSimpleWalk,
+    name: 'Step In Line Dancing',
+    tag: 'New',
+    duration: '50 min · social',
+    desc:
+      'Beginner-friendly line dancing to modern country and pop. Easy to pick up, impossible not to smile through. No partner needed, no previous steps &mdash; just join the line.',
+  },
+  {
+    icon: Sparkle,
+    name: 'PomSquad Fitness',
+    tag: 'Cheer',
+    duration: '45 min · playful',
+    desc:
+      'Cheerleading-inspired fitness with pom-poms, sharp choreography and proper attitude. Tones arms and legs, lifts the mood, brings out the inner teenager.',
   },
   {
     icon: Lightning,
@@ -49,23 +68,23 @@ const classes = [
     tag: 'Strength',
     duration: '40 min · full body',
     desc:
-      'HIIT-style strength and cardio using foam blocks — low impact on the knees, heavy on the results. The one you book when dancing isn&rsquo;t enough.',
+      'HIIT-style strength and cardio using foam blocks &mdash; low impact on the knees, heavy on the results. The one you book when dancing isn&rsquo;t enough.',
   },
   {
-    icon: Star,
-    name: 'First Class Free',
-    tag: 'New? Start here',
-    duration: 'Any format',
+    icon: HeartStraight,
+    name: 'Zumba',
+    tag: 'Latin',
+    duration: '45 min · 300+ cals',
     desc:
-      'Try any class, any format, completely free for your first session. No card on file, no pressure, no &ldquo;intro package&rdquo; upsell. Just come dance.',
+      'Licensed Zumba fitness &mdash; merengue, salsa, cumbia, reggaeton &mdash; built around rhythms you already want to move to. The one that started it all.',
   },
   {
-    icon: Ticket,
-    name: 'Class Bundles',
-    tag: 'Regulars',
-    duration: 'Best value',
+    icon: FireSimple,
+    name: 'Beatz Fitness',
+    tag: 'World Dance',
+    duration: '45 min · 350+ cals',
     desc:
-      'Book four classes in one go and your fifth is on me. Mix and match any format — bring a friend, swap a date, use them on your own time.',
+      'Bhangra, Bollywood, Afrobeats, soca and reggaeton in one class. Every track is a different country &mdash; part workout, part world tour, all good mood.',
   },
 ]
 
@@ -74,7 +93,7 @@ const principles = [
     icon: ShieldCheck,
     title: 'Properly licensed',
     text:
-      'Fully qualified and licensed in all four formats, insured, first-aid trained. The music, the moves and the safety boxes — all ticked.',
+      'Fully qualified and licensed in every format I teach, insured, first-aid trained. The music, the moves and the safety boxes &mdash; all ticked.',
   },
   {
     icon: Users,
@@ -91,11 +110,12 @@ const principles = [
 ]
 
 const timetable = [
-  { day: 'Monday', slot: '7:00 – 7:45 pm', name: 'Clubbercise', venue: 'Shrewsbury' },
-  { day: 'Tuesday', slot: '6:30 – 7:10 pm', name: 'BlockFit', venue: 'Shrewsbury' },
-  { day: 'Wednesday', slot: '9:30 – 10:15 am', name: 'Zumba (Daytime)', venue: 'Shrewsbury' },
-  { day: 'Thursday', slot: '7:00 – 7:45 pm', name: 'Beatz Fitness', venue: 'Shrewsbury' },
-  { day: 'Saturday', slot: '9:30 – 10:15 am', name: 'Clubbercise', venue: 'Shrewsbury' },
+  { day: 'Monday', slot: '7:00 – 7:45 pm', name: 'Clubbercise', venue: 'Telford' },
+  { day: 'Tuesday', slot: '6:30 – 7:10 pm', name: 'BlockFit', venue: 'Telford' },
+  { day: 'Wednesday', slot: '9:30 – 10:30 am', name: 'Yogascape', venue: 'Telford' },
+  { day: 'Thursday', slot: '7:00 – 7:45 pm', name: 'Decades Reloaded', venue: 'Telford' },
+  { day: 'Friday', slot: '10:00 – 10:50 am', name: 'Step In Line Dancing', venue: 'Telford' },
+  { day: 'Saturday', slot: '9:30 – 10:15 am', name: 'Clubbercise', venue: 'Telford' },
 ]
 
 const testimonials = [
@@ -118,11 +138,15 @@ const testimonials = [
 
 const marqueeItems = [
   'Clubbercise',
-  'Beatz Fitness',
+  'Decades Reloaded',
+  'Yogascape',
+  'Step In Line',
+  'PomSquad Fitness',
   'Zumba',
   'BlockFit',
+  'Beatz Fitness',
   'All levels welcome',
-  'Shrewsbury',
+  'Telford',
   'Pay as you go',
   'First class free',
 ]
@@ -154,7 +178,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-3 mb-7">
               <span className="h-px w-10 bg-coral-500" />
               <span className="font-body text-[11px] md:text-[12px] tracking-[0.4em] uppercase text-coral-700 font-medium">
-                Dance fitness · Shrewsbury
+                Community fun fitness · Telford
               </span>
             </div>
 
@@ -165,9 +189,10 @@ export default function Home() {
             </h1>
 
             <p className="font-body text-lg md:text-xl text-plum-700 leading-relaxed max-w-xl mb-10">
-              Four licensed dance fitness formats &mdash; Clubbercise, Beatz, Zumba and
-              BlockFit &mdash; with Amanda Telford, across Shrewsbury. High-energy, properly
-              welcoming, and genuinely fun. Your first class is on me.
+              Eight licensed class formats &mdash; Clubbercise, Decades Reloaded,
+              Yogascape, Step In Line, PomSquad, Zumba, Beatz and BlockFit &mdash; with
+              Amanda Telford, across Telford. Non-judgemental, fun, friendly. Your
+              first class is on me.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -189,7 +214,7 @@ export default function Home() {
             <div className="flex flex-wrap items-center gap-x-8 gap-y-3 text-[12px] tracking-[0.18em] uppercase text-plum-500 font-medium">
               <span className="inline-flex items-center gap-2">
                 <ShieldCheck weight="duotone" className="w-4 h-4 text-coral-600" />
-                Licensed in all 4
+                Licensed in all 8
               </span>
               <span className="inline-flex items-center gap-2">
                 <Users weight="duotone" className="w-4 h-4 text-coral-600" />
@@ -197,8 +222,15 @@ export default function Home() {
               </span>
               <span className="inline-flex items-center gap-2">
                 <MapPin weight="duotone" className="w-4 h-4 text-coral-600" />
-                Shrewsbury
+                Telford
               </span>
+              <a
+                href="tel:+447780515350"
+                className="inline-flex items-center gap-2 hover:text-coral-600 transition-colors"
+              >
+                <Phone weight="duotone" className="w-4 h-4 text-coral-600" />
+                07780 515350
+              </a>
             </div>
           </div>
 
@@ -246,7 +278,7 @@ export default function Home() {
                 <div className="text-[10px] tracking-[0.3em] uppercase text-coral-300 mb-1">
                   Teaching in
                 </div>
-                <div className="font-heading text-2xl">Shrewsbury</div>
+                <div className="font-heading text-2xl">Telford</div>
               </div>
             </div>
           </Reveal>
@@ -282,12 +314,12 @@ export default function Home() {
               </span>
             </div>
             <h2 className="font-heading text-4xl md:text-6xl leading-[1.05] tracking-tight text-plum-950 mb-6">
-              Four formats. One <span className="italic text-coral-gradient">very good reason</span> to turn up.
+              Eight formats. One <span className="italic text-coral-gradient">very good reason</span> to turn up.
             </h2>
             <p className="text-plum-600 text-lg leading-relaxed">
               Every class is licensed, properly choreographed and beginner-friendly. Pick
-              the vibe that suits the mood &mdash; or rotate through all four and find your
-              favourite. First one&rsquo;s on me either way.
+              the vibe that suits the mood &mdash; from full-tilt Clubbercise to a restorative
+              Yogascape flow &mdash; or rotate through the lot. First one&rsquo;s on me either way.
             </p>
           </Reveal>
 
@@ -354,7 +386,7 @@ export default function Home() {
               <div className="hidden md:flex absolute -bottom-6 -right-6 w-40 h-40 rounded-[4px] border border-plum-200 bg-cream-50 items-center justify-center">
                 <div className="text-center px-4">
                   <div className="font-heading italic text-4xl text-coral-gradient leading-none">
-                    4
+                    8
                   </div>
                   <div className="text-[9px] tracking-[0.3em] uppercase text-plum-400 mt-2">
                     Licensed formats
@@ -376,10 +408,11 @@ export default function Home() {
               The front row is <span className="italic text-coral-gradient">nobody&rsquo;s</span>. Which means it&rsquo;s yours.
             </h2>
             <p className="text-plum-700 text-lg leading-relaxed mb-5">
-              Hi, I&rsquo;m Amanda &mdash; a licensed dance fitness instructor based in Shrewsbury,
-              teaching Clubbercise, Beatz Fitness, Zumba and BlockFit. I started teaching
-              because the classes I loved never stayed in one place long enough, and I
-              wanted to build something that actually felt like a Friday night.
+              Hi, I&rsquo;m Amanda &mdash; a licensed community fitness instructor based in
+              Telford, teaching eight different class formats from full-tilt Clubbercise
+              to a peaceful Yogascape flow. I started teaching because the classes I
+              loved never stayed in one place long enough, and I wanted to build
+              something that actually felt like a Friday night.
             </p>
             <p className="text-plum-600 leading-relaxed mb-5">
               My classes aren&rsquo;t studio-body, mirror-wall, front-of-the-room-or-don&rsquo;t-bother
@@ -425,12 +458,12 @@ export default function Home() {
               </span>
             </div>
             <h2 className="font-heading text-4xl md:text-6xl leading-[1.05] tracking-tight text-plum-950 mb-6">
-              Five classes. <span className="italic text-coral-gradient">One week</span>.
+              Six classes. <span className="italic text-coral-gradient">One week</span>.
             </h2>
             <p className="text-plum-600 text-lg leading-relaxed">
-              Classes run across Shrewsbury in proper halls &mdash; sprung floors, good
-              sound, parking. Message me for the venue nearest you or to check current
-              availability. Timings may shift in school holidays.
+              Classes run across Telford in proper halls &mdash; sprung floors, good
+              sound, parking. Message or call me for the venue nearest you, or to check
+              current availability. Timings may shift in school holidays.
             </p>
           </Reveal>
 
@@ -532,7 +565,27 @@ export default function Home() {
 
             <div className="space-y-5">
               <a
-                href="https://www.facebook.com/"
+                href="tel:+447780515350"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+                    window.gtag('event', 'tel_link_click', { event_category: 'contact' })
+                  }
+                }}
+                className="flex items-center gap-4 p-5 border border-plum-200 rounded-[4px] hover:border-coral-500 hover:bg-cream-100 transition-all group lift"
+              >
+                <div className="w-11 h-11 rounded-[4px] bg-coral-100 border border-coral-500/40 flex items-center justify-center flex-shrink-0 group-hover:bg-coral-500 group-hover:border-coral-500 transition-colors">
+                  <Phone weight="fill" className="w-5 h-5 text-coral-700 group-hover:text-cream-50 transition-colors" />
+                </div>
+                <div>
+                  <div className="text-[10px] tracking-[0.3em] uppercase text-coral-700 mb-0.5">
+                    Call or text
+                  </div>
+                  <div className="font-heading text-xl text-plum-950">07780 515350</div>
+                </div>
+              </a>
+
+              <a
+                href="https://www.facebook.com/search/top/?q=Amanda%20Telford%20Clubbercise"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-5 border border-plum-200 rounded-[4px] hover:border-coral-500 hover:bg-cream-100 transition-all group lift"
@@ -544,12 +597,12 @@ export default function Home() {
                   <div className="text-[10px] tracking-[0.3em] uppercase text-coral-700 mb-0.5">
                     Facebook
                   </div>
-                  <div className="font-heading text-xl text-plum-950">Message Amanda</div>
+                  <div className="font-heading text-xl text-plum-950">Find Amanda on Facebook</div>
                 </div>
               </a>
 
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/amandaclubbercise72/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-5 border border-plum-200 rounded-[4px] hover:border-coral-500 hover:bg-cream-100 transition-all group lift"
@@ -561,7 +614,7 @@ export default function Home() {
                   <div className="text-[10px] tracking-[0.3em] uppercase text-coral-700 mb-0.5">
                     Instagram
                   </div>
-                  <div className="font-heading text-xl text-plum-950">See the classes in action</div>
+                  <div className="font-heading text-xl text-plum-950">@amandaclubbercise72</div>
                 </div>
               </a>
 
@@ -573,7 +626,7 @@ export default function Home() {
                   <div className="text-[10px] tracking-[0.3em] uppercase text-coral-700 mb-0.5">
                     Teaching across
                   </div>
-                  <div className="text-plum-800">Shrewsbury &amp; surrounding Shropshire villages</div>
+                  <div className="text-plum-800">Telford &amp; surrounding Shropshire villages</div>
                 </div>
               </div>
             </div>
@@ -600,7 +653,14 @@ export default function Home() {
           </div>
           <div className="flex items-center gap-5">
             <a
-              href="https://www.instagram.com/"
+              href="tel:+447780515350"
+              className="text-plum-500 hover:text-coral-600 transition-colors"
+              aria-label="Call Amanda"
+            >
+              <Phone weight="fill" className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.instagram.com/amandaclubbercise72/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-plum-500 hover:text-coral-600 transition-colors"
@@ -609,7 +669,7 @@ export default function Home() {
               <InstagramLogo weight="fill" className="w-5 h-5" />
             </a>
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/search/top/?q=Amanda%20Telford%20Clubbercise"
               target="_blank"
               rel="noopener noreferrer"
               className="text-plum-500 hover:text-coral-600 transition-colors"
