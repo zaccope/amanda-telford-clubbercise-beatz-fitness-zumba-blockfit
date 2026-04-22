@@ -566,11 +566,6 @@ export default function Home() {
             <div className="space-y-5">
               <a
                 href="tel:+447780515350"
-                onClick={() => {
-                  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-                    window.gtag('event', 'tel_link_click', { event_category: 'contact' })
-                  }
-                }}
                 className="flex items-center gap-4 p-5 border border-plum-200 rounded-[4px] hover:border-coral-500 hover:bg-cream-100 transition-all group lift"
               >
                 <div className="w-11 h-11 rounded-[4px] bg-coral-100 border border-coral-500/40 flex items-center justify-center flex-shrink-0 group-hover:bg-coral-500 group-hover:border-coral-500 transition-colors">
