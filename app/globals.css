@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FAF6EF;
+    color: #2A1624;
+  }
+
+  ::selection {
+    background-color: #D94A85;
+    color: #FAF6EF;
+  }
+}
+
+@layer utilities {
+  .paper-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' /%3E%3CfeColorMatrix values='0 0 0 0 0.4 0 0 0 0 0.2 0 0 0 0 0.3 0 0 0 0.05 0' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .coral-divider {
+    background: linear-gradient(90deg, transparent, #D94A85 30%, #7A5AF8 50%, #D94A85 70%, transparent);
+  }
+
+  .text-coral-gradient {
+    background: linear-gradient(120deg, #D94A85 0%, #7A5AF8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-coral-solid {
+    background: linear-gradient(180deg, #D94A85 0%, #972654 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glow-spot {
+    background: radial-gradient(ellipse at center, rgba(217, 74, 133, 0.12) 0%, transparent 65%);
+  }
+
+  .glow-spot-soft {
+    background: radial-gradient(ellipse at center, rgba(122, 90, 248, 0.06) 0%, transparent 70%);
+  }
+
+  .drift {
+    animation: drift 32s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+
+  .drift-slow {
+    animation: drift 48s ease-in-out infinite alternate-reverse;
+    will-change: transform;
+  }
+
+  .pulse-soft {
+    animation: pulseSoft 4s ease-in-out infinite;
+    will-change: opacity, transform;
+  }
+
+  .lift {
+    transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 400ms ease,
+                background-color 400ms ease,
+                box-shadow 500ms ease;
+  }
+  .lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 44px -22px rgba(151, 38, 84, 0.30);
+  }
+
+  .hairline {
+    background: linear-gradient(90deg, transparent, rgba(58, 22, 36, 0.18), transparent);
+    height: 1px;
+  }
+
+  .shimmer-border {
+    position: relative;
+  }
+  .shimmer-border::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(120deg, transparent 35%, rgba(217, 74, 133, 0.5) 50%, transparent 65%);
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 500ms ease;
+    pointer-events: none;
+  }
+  .shimmer-border:hover::after {
+    opacity: 1;
+  }
+
+  .ticker-track {
+    animation: ticker 38s linear infinite;
+    will-change: transform;
+  }
+}
+
+@keyframes drift {
+  0%   { transform: translate3d(-2%, -1%, 0) scale(1); }
+  100% { transform: translate3d(2%, 1%, 0) scale(1.04); }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.05); }
+}
+
+@keyframes ticker {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-reveal > * {
+  opacity: 0;
+  animation: fadeInUp 900ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero-reveal > *:nth-child(1) { animation-delay: 80ms; }
+.hero-reveal > *:nth-child(2) { animation-delay: 180ms; }
+.hero-reveal > *:nth-child(3) { animation-delay: 280ms; }
+.hero-reveal > *:nth-child(4) { animation-delay: 380ms; }
+.hero-reveal > *:nth-child(5) { animation-delay: 480ms; }
+.hero-reveal > *:nth-child(6) { animation-delay: 580ms; }
+.hero-reveal > *:nth-child(7) { animation-delay: 680ms; }
+.hero-reveal > *:nth-child(8) { animation-delay: 780ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .drift, .drift-slow, .pulse-soft, .ticker-track { animation: none; }
+  .hero-reveal > * { opacity: 1; animation: none; }
+}
